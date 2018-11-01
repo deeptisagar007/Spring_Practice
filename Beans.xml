@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<!-- <bean id = "helloWorldBean" class = "com.tutorialspoint.spring.HelloWorld" 
+		init-method="init" destroy-method="destroy"> <property name = "message" value 
+		= "From First Object"/> </bean> -->
+
+	<!-- <bean class="com.tutorialspoint.spring.InitHelloWorld"></bean> -->
+	
+	
+	
+	<!-- 
+	<bean class="com.tPoint.beanDefinition.HelloWorld" id="beanDefinitionHelloWorld">
+		<property name="message1" value="HelloWorld message1"></property>
+		<property name="message2" value="HelloWorld message2"></property>
+	</bean>
+	
+	<bean class="com.tPoint.beanDefinition.HelloIndia" id="beanDefinitionHelloIndia" parent="beanDefinitionHelloWorld">
+		<property name="message1" value="HelloIndia message1"></property>
+		<property name="message3" value="Namaste India message3"></property>
+	</bean>
+	 -->
+	 
+	 
+	
+	<!--
+	 <bean id="beanTeamplate" abstract="true" >
+		<property name="message1" value="beanTeamplate message1"></property>
+		<property name="message2" value="beanTeamplate message2"></property>
+		<property name="message3" value="beanTeamplate message3"></property>
+		<property name="message4" value="beanTeamplate message4"></property>
+	</bean>
+	
+	<bean class="com.tPoint.beanDefinition.HelloIndia" id="beanDefinitionHelloIndia" parent="beanTeamplate">
+		<property name="message1" value="HelloIndia message1"></property>
+		<property name="message3" value="Namaste India message3"></property>
+	</bean>
+	 -->
+	
+	
+	
+	<!-- 	
+	<bean class="com.tPoint.innerBean.TextEditor" id="textEditor" >
+		<property name="spellChecker" ref="spellChecker">
+			//<bean class="com.tPoint.innerBean.SpellChecker" id="spellChecker">
+			//</bean> 
+		</property>
+	</bean>
+	<bean class="com.tPoint.innerBean.SpellChecker" id="spellChecker">
+	</bean>
+	 -->
+	 
+	<!--
+	
+	=========== Error with addressCollection ==============================
+	
+	
+	<bean class="com.tPoint.injectCollection.JavaCollection" id="address">
+		<property name="addressList" >
+			<list>
+				<value>India</value>
+				<value>USA</value>
+				<value>US</value>
+			</list>
+		</property>
+		<property name="addressSet">
+			<set>
+				<value>India</value>
+				<value>USA</value>
+				<value>US</value>
+			</set>
+		</property>
+		<property name="addressMap">
+			<map>
+				<entry key="1" value="India"></entry>
+				<entry key="2" value="USA"></entry>
+				<entry key="3" value="US"></entry>
+			</map>
+		</property>
+		<property name="addressProp">
+			<props>
+				<prop key="1">India</prop>
+				<prop key="2">USA</prop>
+				<prop key="3">US</prop>
+			</props>
+		</property>
+	</bean>
+	<bean class="com.tPoint.injectCollection.JavaCollection" id="address1">
+		<property name="addressList">
+			<list> 
+				<value>Add1ListIndia</value>
+				<value>Add1ListUSA</value>
+				<value>Add1ListUS</value>
+			</list>
+		</property>
+		<property name="addressSet">
+			<set>
+				<value>Add1SetIndia</value>
+				<value>Add1SetUSA</value>
+				<value>Add1SetUS</value>
+			</set>
+		</property>
+		<property name="addressMap">
+			<map>
+				<entry key="1" value="Add1MapIndia"></entry>
+				<entry key="2" value="Add1MapUSA"></entry>
+				<entry key="3" value="Add1MapUS"></entry>
+			</map>
+		</property>
+		<property name="addressProp">
+			<props>
+				<prop key="1">Add1PropIndia</prop>
+				<prop key="2">Add1PropUSA</prop>
+				<prop key="3">Add1PropUS</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean class="com.tPoint.injectCollection.JavaCollection" id="addressCollection">
+		<property name="mainList">
+			<list>
+				<ref bean="address"/>
+				<ref bean="address1" />
+			</list>
+		</property>
+	
+		=========== Error with addressCollection ==============================
+	
+		<property name="addressList">
+			<list>
+				 <ref bean="address" />
+				 <ref bean="address1"/>
+			</list>
+		</property>
+		<property name="addressSet">
+			<set>
+				<ref bean="address" />
+				<ref bean="address1" />
+			</set>
+		</property>
+		<property name="addressMap">
+			<map>
+				<entry key="1" value-ref="address"></entry>
+				<entry key="2" value-ref="address1"></entry>
+			</map>
+		</property>
+		<property name="addressProp">
+			<props>
+				<prop key="1">Only String Value
+				</prop>
+			</props>
+		</property>
+	</bean>
+	 -->
+	
+</beans>
+
+
+
+
+
+
+
+
